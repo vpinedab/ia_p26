@@ -22,6 +22,8 @@ Bienvenido al curso de Inteligencia Artificial.
 ## Enlaces
 
 - **Sitio web**: [www.sonder.art/ia_p26](https://www.sonder.art/ia_p26/)
+- **Introducción**: [Ver contenido]({{ \'/01_introduccion/00_index/\' | url }})
+- **Presentación**: [Google Drive](https://docs.google.com/presentation/d/1HKFdjhDmgI0wURvAqAiysOKaxxeNnWiaRO1iYHYt0dc/edit?usp=sharing)
 
 ### Recursos del Curso
 

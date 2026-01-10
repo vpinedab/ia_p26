@@ -1,7 +1,7 @@
-:::homework{id="A.2.1" title="Curso: AI Assisted Coding for Developers"}
+:::homework{id="A.2.1" title="Curso: AI Assisted Coding for Developers" due="2026-01-19" points="20"}
 
 Completa el curso [AI Assisted Coding for Developers](https://app.datacamp.com/learn/courses/ai-assisted-coding-for-developers). La evidencia se sube después en A.5.5 (módulo Git).
-
+Solo se necesitan completar las primeras 2 unidades: 'Unlocking the Power of AI in Code' & 'Prompt Engineering for Real-World Coding Tasks'
 :::
 
 # Large Language Models (LLMs)
@@ -10,7 +10,8 @@ Completa el curso [AI Assisted Coding for Developers](https://app.datacamp.com/l
 
 Para profundizar en el uso de asistentes de IA para programar, completa el siguiente curso:
 *   [AI Assisted Coding for Developers](https://app.datacamp.com/learn/courses/ai-assisted-coding-for-developers)  
-Asegurate de completar el curso, la idea es que aprendas a hacer prompts en general, no se subira evidencia de esta tarea hasta depues (completando le modulo de github) pero debes completarlo para la siguiente clase por que te sera de gran ayuda en las tareas y en lo que estaremos aprendiendo.
+Asegurate de completar el curso, la idea es que aprendas a hacer prompts en general, no se subira evidencia de esta tarea hasta depues (completando le modulo de github) pero debes completarlo para la siguiente clase por que te sera de gran ayuda en las tareas y en lo que estaremos aprendiendo.  
+Solo se necesitan completar las primeras 2 unidades: 'Unlocking the Power of AI in Code' & 'Prompt Engineering for Real-World Coding Tasks'
 
 ## ¿Qué son los LLMs?
 

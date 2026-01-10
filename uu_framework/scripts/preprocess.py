@@ -27,6 +27,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from extract_metadata import extract_all_metadata
 from generate_indices import generate_hierarchy
 from aggregate_tasks import aggregate_all_tasks
+from process_calendar_topics import process_calendar_topics
 
 
 def load_config(config_path: Path) -> dict:
@@ -265,6 +266,17 @@ def main():
     with open(tasks_path, 'w', encoding='utf-8') as f:
         json.dump(tasks, f, indent=2, ensure_ascii=False)
     print(f"      Saved {sum(len(v) for v in tasks.values())} tasks to {tasks_path}")
+
+    # Step 4: Process calendar topics from CSV
+    print("\n[4/4] Processing calendar topics...")
+    csv_path = args.content / 'calendario_temas.csv'
+    calendar_topics = process_calendar_topics(csv_path, args.verbose)
+
+    # Save calendar topics
+    calendar_path = args.output / 'calendar_topics.json'
+    with open(calendar_path, 'w', encoding='utf-8') as f:
+        json.dump(calendar_topics, f, indent=2, ensure_ascii=False)
+    print(f"      Saved {len(calendar_topics)} calendar entries to {calendar_path}")
 
     # Save site config for templates
     site_path = args.output / 'site.json'

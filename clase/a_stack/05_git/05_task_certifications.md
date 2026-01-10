@@ -1,6 +1,7 @@
-:::homework{id="A.5.5" title="Tarea 01: Certificación GitHub + Entrega de evidencias"}
+:::homework{id="A.5.5" title="Tarea 01: Certificación GitHub + Entrega de evidencias" due="2026-01-26" points="30"}
 
 Completa el curso [GitHub Concepts](https://app.datacamp.com/learn/courses/introduction-to-github-concepts) y sube las evidencias de AMBOS cursos (LLM de A.2.1 + GitHub) a tu carpeta personal mediante Pull Request.
+El curso vale 15 puntos, el pull request vale 15 puntos.
 
 :::
 

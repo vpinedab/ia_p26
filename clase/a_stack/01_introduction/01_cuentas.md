@@ -1,4 +1,4 @@
-:::homework{id="A.1.1" title="Crear cuentas: LLMs y DataCamp"}
+:::homework{id="A.1.1" title="Crear cuentas: LLMs y DataCamp" due="2026-01-14" points="0"}
 
 Crea cuentas en las plataformas de LLM (Gemini, ChatGPT, Claude, etc.) y únete al grupo de DataCamp con tu correo @itam.mx.
 

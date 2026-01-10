@@ -1,4 +1,4 @@
-:::homework{id="A.5.2" title="Fork y Clone del repositorio"}
+:::homework{id="A.5.2" title="Fork y Clone del repositorio" due="2026-01-26" points="0"}
 
 Haz Fork del repositorio del curso, clónalo a tu máquina y configura el remote `upstream`. Crea tu carpeta personal en `estudiantes/tu_usuario/`.
 

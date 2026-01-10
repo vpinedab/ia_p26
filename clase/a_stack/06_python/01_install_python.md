@@ -1,4 +1,4 @@
-:::homework{id="A.6.1" title="Instalar Python 3"}
+:::homework{id="A.6.1" title="Instalar Python 3" due="2026-01-26" points="0"}
 
 Instala Python 3 en tu sistema (dentro de WSL si usas Windows) y verifica con `python3 --version`.
 

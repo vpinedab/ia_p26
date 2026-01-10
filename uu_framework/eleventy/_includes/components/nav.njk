@@ -110,6 +110,7 @@
 {# Task pages section #}
 {% set currentFullUrl = page.url | url %}
 {% set tareasUrl = '/tareas/' | url %}
+{% set calendarioUrl = '/calendario/' | url %}
 {% set examenesUrl = '/examenes/' | url %}
 {% set proyectosUrl = '/proyectos/' | url %}
 <div class="nav-tasks mb-4 pb-3 border-b border-border/50">
@@ -126,6 +127,15 @@
       {% if tasks.homework.length > 0 %}
       <span class="ml-auto text-xs bg-homework/20 text-homework px-1.5 py-0.5 rounded">{{ tasks.homework.length }}</span>
       {% endif %}
+    </a>
+    <a href="{{ calendarioUrl }}" class="flex items-center px-2 py-1.5 rounded text-sm transition-colors
+       {% if currentFullUrl == calendarioUrl %}bg-accent/15 text-accent{% else %}text-text-muted hover:text-text hover:bg-bg-tertiary{% endif %}">
+      <span class="w-5 h-5 mr-2 flex items-center justify-center text-accent">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </span>
+      <span>Calendario</span>
     </a>
     <a href="{{ examenesUrl }}" class="flex items-center px-2 py-1.5 rounded text-sm transition-colors
        {% if currentFullUrl == examenesUrl %}bg-exam/15 text-exam{% else %}text-text-muted hover:text-text hover:bg-bg-tertiary{% endif %}">

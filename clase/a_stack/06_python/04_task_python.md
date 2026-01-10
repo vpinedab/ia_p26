@@ -1,4 +1,4 @@
-:::homework{id="A.6.4" title="Tarea 02: Script Python y Certificación"}
+:::homework{id="A.6.4" title="Tarea 02: Script Python y Certificación" due="2026-01-28" points="20"}
 
 Completa el curso [Introduction to Python for Data Science](https://app.datacamp.com/learn/courses/intro-to-python-for-data-science), crea un script Python con clase/función/if-else, y envía todo mediante Pull Request.
 

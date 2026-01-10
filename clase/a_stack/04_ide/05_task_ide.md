@@ -1,10 +1,10 @@
-:::homework{id="A.4.5" title="Tarea: Primer proyecto con Cursor"}
+:::homework{id="A.4.5" title="Tarea: Primer proyecto con Cursor" due="2026-01-21" points="5"}
 
 Crea una carpeta `test_ide`, usa Composer para generar `hola_ide.md` con una biografía ficticia, y renderiza el markdown.
 
 :::
 
-# Tarea Práctica: Tu Primer Vuelo con Cursor
+# Tarea Práctica
 
 Esta tarea es para que te familiarices con tu nuevo IDE. No hay que entregarla en GitHub todavía, es para ti.
 
@@ -21,7 +21,7 @@ Instalar Cursor (o una alternativa), crear un proyecto simple y usar la IA para 
 3.  **Usar Composer (Plan Mode):**
     *   Presiona `Ctrl + I` (o `Cmd + I`).
     *   Escribe este prompt:
-        > "Crea un archivo llamado 'hola_ide.md'. Dentro, escribe una breve biografía ficticia de un programador de IA del año 2050. Usa formato markdown con títulos, negritas y una lista de sus habilidades."
+        > "Crea un archivo llamado 'hola_ide.md'. Dentro, escribe alguna reflexion filosofica sobre la ia o algun tema visto."
     *   Dale a "Submit" y observa cómo crea el archivo.
     *   Revisa el cambio y dale a "Accept" (o `Ctrl + Enter`).
 4.  **Renderizar Markdown:**

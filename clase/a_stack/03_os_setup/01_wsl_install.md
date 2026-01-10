@@ -1,4 +1,4 @@
-:::homework{id="A.3.1" title="Instalación de Unix "}
+:::homework{id="A.3.1" title="Instalación de Unix " due="2026-01-21" points="0"}
 
 Instala WSL2 en tu computadora Windows siguiendo esta guía. Verifica que funciona ejecutando  `python3 --version` o `python --version` en la terminal de Ubuntu. Si tienes mac o linux o wsl2 ya instaldo no hay problema.
 

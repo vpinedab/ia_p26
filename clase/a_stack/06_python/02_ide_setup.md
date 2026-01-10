@@ -1,4 +1,4 @@
-:::homework{id="A.6.2" title="Configurar extensión Python y venv"}
+:::homework{id="A.6.2" title="Configurar extensión Python y venv" due="2026-01-28" points="0"}
 
 Instala la extensión de Python en Cursor, crea un entorno virtual con `python3 -m venv venv` y verifica que el intérprete correcto está seleccionado.
 
