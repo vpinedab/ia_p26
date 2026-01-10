@@ -61,13 +61,15 @@ def generate_docs_hierarchy(docs_dir: Path, verbose: bool = False) -> dict:
             section = {
                 "name": item.name,
                 "path": f"docs/{item.name}",
+                "url": f"/docs/{item.name}/",  # Direct URL to avoid /00_index/
                 "type": "directory",
                 "title": {
                     "dev": "Developer Guide",
                     "profesor": "Guía del Profesor",
                     "estudiante": "Guía del Estudiante"
                 }.get(item.name, item.name.title()),
-                "has_index": (item / "00_index.md").exists(),
+                "has_index": False,  # Uses pagination, not actual 00_index.md
+                "no_number": True,  # Docs don't show numbers
                 "children": []
             }
 
@@ -80,6 +82,7 @@ def generate_docs_hierarchy(docs_dir: Path, verbose: bool = False) -> dict:
                         "type": "file",
                         "title": get_title_from_file(child),
                         "has_index": False,
+                        "no_number": True,  # Docs don't show numbers
                         "children": []
                     }
                     section["children"].append(child_entry)
@@ -96,6 +99,7 @@ def generate_docs_hierarchy(docs_dir: Path, verbose: bool = False) -> dict:
             "type": "directory",
             "title": "Documentación",
             "has_index": False,  # Uses pagination template, not 00_index.md
+            "no_number": True,  # Don't show numbers in navigation
             "children": docs_children
         }
     return None

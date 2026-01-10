@@ -84,7 +84,9 @@
               {% if activeState == 'current' %}bg-accent/15 text-accent border-l-2 border-accent -ml-0.5 pl-2
               {% elif activeState == 'ancestor' %}text-text bg-bg-tertiary/50
               {% else %}text-text-muted hover:text-text hover:bg-bg-tertiary{% endif %}">
+      {% if not item.no_number %}
       <span class="nav-number text-xs {% if activeState == 'current' %}text-accent{% else %}text-accent-secondary{% endif %} mr-1.5 flex-shrink-0 font-mono">{{ num }}</span>
+      {% endif %}
       <span class="nav-title leading-snug">{{ (item.title | cleanNavTitle) | trim | default(item.name) }}</span>
     </a>
   </div>
