@@ -81,6 +81,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("favicon*.png");
 
+  // Copy .nojekyll to prevent GitHub Pages from using Jekyll
+  eleventyConfig.addPassthroughCopy(".nojekyll");
+
   // Ignore output directory to prevent scanning it
   eleventyConfig.ignores.add("../_site/**");
 
