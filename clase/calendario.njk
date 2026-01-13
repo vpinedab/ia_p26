@@ -276,8 +276,23 @@ layout: layouts/base.njk
     ...tasksData.projects
   ];
 
-  // Current state
-  let currentDate = new Date();
+  // Current state (Mexico City timezone)
+  const MEXICO_TZ = 'America/Mexico_City';
+
+  // Get current date in Mexico City timezone
+  function getMexicoDate() {
+    const now = new Date();
+    const mexicoDateStr = now.toLocaleString('en-US', { timeZone: MEXICO_TZ });
+    return new Date(mexicoDateStr);
+  }
+
+  // Get today's date string in Mexico City timezone (YYYY-MM-DD)
+  function getTodayMexicoStr() {
+    const mexicoDate = getMexicoDate();
+    return mexicoDate.toISOString().split('T')[0];
+  }
+
+  let currentDate = getMexicoDate();
   let currentView = localStorage.getItem('calendar-view') || 'month';
 
   // Month names in Spanish
@@ -351,8 +366,7 @@ layout: layouts/base.njk
   }
 
   function isToday(dateStr) {
-    const today = new Date().toISOString().split('T')[0];
-    return dateStr === today;
+    return dateStr === getTodayMexicoStr();
   }
 
   function formatDate(dateStr) {
@@ -462,9 +476,9 @@ layout: layouts/base.njk
 
   // Render list view
   function renderListView() {
-    const today = new Date();
+    const today = getMexicoDate();
     today.setHours(0, 0, 0, 0); // Reset to midnight for accurate comparison
-    const todayStr = today.toISOString().split('T')[0];
+    const todayStr = getTodayMexicoStr();
 
     // Calculate week boundaries
     const todayDayOfWeek = today.getDay(); // 0 = Sunday, 6 = Saturday

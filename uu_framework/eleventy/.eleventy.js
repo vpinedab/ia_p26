@@ -94,14 +94,15 @@ module.exports = function(eleventyConfig) {
     return md.render(content);
   });
 
-  // Format date in Spanish
+  // Format date in Spanish (Mexico City timezone)
   eleventyConfig.addFilter("formatDate", function(date) {
     if (!date) return '';
-    const d = new Date(date);
+    const d = new Date(date + 'T12:00:00');  // Noon to avoid timezone shifts
     return d.toLocaleDateString('es-MX', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'America/Mexico_City'
     });
   });
 
