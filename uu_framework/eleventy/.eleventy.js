@@ -71,15 +71,17 @@ module.exports = function(eleventyConfig) {
 
   // Copy images from all content subdirectories
   // Convention: images for each section are stored in */images/ subdirectories
-  // Match numbered chapters (01_, 02_, etc.) and appendices (a_, b_, etc.)
-  ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'].forEach(num => {
-    eleventyConfig.addPassthroughCopy(`${num}_*/**/images/**`);
-  });
-  ['a', 'b', 'c'].forEach(letter => {
-    eleventyConfig.addPassthroughCopy(`${letter}_*/**/images/**`);
-  });
-  // Also copy root images directory if it exists
+  // Note: We use find + copy in docker-compose.yaml for local dev due to glob issues
+  // with special characters in directory names (e.g., &)
+  // This handles simple cases; GitHub Actions handles production builds
   eleventyConfig.addPassthroughCopy({ "images": "images" });
+  eleventyConfig.addPassthroughCopy("01_*/images/**");
+  eleventyConfig.addPassthroughCopy("02_*/images/**");
+  eleventyConfig.addPassthroughCopy("03_*/images/**");
+  eleventyConfig.addPassthroughCopy("04_*/images/**");
+  eleventyConfig.addPassthroughCopy("05_*/images/**");
+  eleventyConfig.addPassthroughCopy("a_*/images/**");
+  eleventyConfig.addPassthroughCopy("a_*/**/images/**");
 
   // Copy PDF files from content directories (exclude b_libros which is gitignored)
   // Match all PDFs in numbered directories (01_, 02_, 03_, etc.)

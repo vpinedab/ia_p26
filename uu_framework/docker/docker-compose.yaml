@@ -51,6 +51,7 @@ services:
              cp uu_framework/eleventy/src/css/themes/*.css _site/css/themes/ &&
              cp clase/favicon.ico clase/apple-touch-icon.png _site/ 2>/dev/null || true &&
              if [ -d clase/images ]; then mkdir -p _site/images && cp -r clase/images/* _site/images/; fi &&
+             find clase -type d -name images | grep -v b_libros | while read img_dir; do rel_path=$${img_dir#clase/}; mkdir -p _site/$$rel_path; cp -r $$img_dir/* _site/$$rel_path/ 2>/dev/null || true; done &&
              find clase -name '*.pdf' | grep -v b_libros | while read pdf; do rel_path=$${pdf#clase/}; pdf_dir=$$(dirname $$rel_path); mkdir -p _site/$$pdf_dir; cp $$pdf _site/$$rel_path; done &&
              touch _site/.nojekyll &&
              npx @11ty/eleventy --config=uu_framework/eleventy/.eleventy.js --serve --port=3000"
